@@ -42,11 +42,11 @@ void kisebbNagyobb(int sz1, int sz2) {
 }
 
 int nullaElso(int sz1) {
-  return math.Random().nextInt(sz1);
+  return math.Random().nextInt(sz1 - 1) + 1;
 }
 
 int elsoMasodik(int sz1, int sz2) {
-  return math.Random().nextInt(sz2 - sz1 + 1) + sz1;
+  return math.Random().nextInt(sz2 - sz1 - 1) + sz1 + 1;
 }
 
 double atlo(int sz1, int sz2) {
