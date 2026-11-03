@@ -32,6 +32,10 @@ print(getAverage([1, 2, 3, 4, 5]) == 3);
 print(getAverage([1, 1, 1, 1, 1, 1, 1, 2]) == 1);}
 
 double getVolumeOfCuboid(double length, double width, double height) {
+    if (length <= 0 || width <= 0 || height <= 0) {
+        print("All numbers must be positive.");
+        return 0;
+    }
     return length * width * height;
 }
 
@@ -58,16 +62,16 @@ bool checkForFactor(int base, int factor) {
 
 List<int> countPositivesSumNegatives(List<int>? input) {
     if (input == null) return [0, 0];
-    int positives = 0;
-    int negatives = 0;
+    int pos = 0;
+    int neg = 0;
     for (int i = 0; i < input.length; i++) {
         if (input[i] > 0) {
-            positives++;
+            pos++;
         } else if (input[i] < 0) {
-            negatives += input[i];
+            neg += input[i];
         }
     }
-    return [positives, negatives];
+    return [pos, neg];
 }
 
 int getAverage(List<int> arr) {
