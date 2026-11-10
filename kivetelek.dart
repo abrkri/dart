@@ -27,6 +27,5 @@ void main() {
     print(e);
   } finally {
         print("maradék: $res");
-
   }
 }
